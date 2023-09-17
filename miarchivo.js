@@ -126,13 +126,13 @@ function comprarPlantas() {
         const descuento = precioFinal * 0.1;
         precioFinal -= descuento;
     
-    // Se usó Math.round para redondear el total del precio para el descuento del 10% 
+    // Se usó Math.round para redondear el total del precio para el descuento del 10%:
         const descuentoRedondeado = Math.round(descuento);
         mostrarMensaje(`Se aplicó un descuento del 10% a su compra (redondeado a ${descuentoRedondeado}).`);
     }
 
-    // La fecha, la hora, el precio final y la cantidad total de plantas compradas para que las vea el cliente:
-    const mensajeFinal = `Fecha de compra: ${fechaCompra}\n\nHora de compra: ${horaCompra}\n\nPrecio final acumulado: $${precioFinal.toFixed(2)}\n\nCantidad total de plantas compradas: ${cantidadTotalPlantas}`;
+    // La fecha, la hora, el precio final con el descuento y la cantidad total de plantas compradas para que las vea el cliente:
+    const mensajeFinal = `Fecha de compra: ${fechaCompra}\n\nHora de compra: ${horaCompra}\n\nPrecio final con descuento: $${precioFinal.toFixed(2)}\n\nCantidad total de plantas compradas: ${cantidadTotalPlantas}`;
     mostrarMensaje(mensajeFinal);
     mostrarMensaje('Gracias por su compra. ¡Hasta luego!');
 }
